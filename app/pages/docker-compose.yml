@@ -1,0 +1,40 @@
+version: '3'
+services:
+
+  #Nginx Service
+  webserver:
+    image: richarvey/nginx-php-fpm
+    container_name: webserver
+    restart: unless-stopped
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/site-enabled/default.conf
+      - ./apps/:/var/www
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - app-network
+
+  #MySQL Service
+  db:
+    image: mysql:5.7.22
+    container_name: db
+    restart: unless-stopped
+    volumes:
+      - ./db-data/:/var/lib/mysql/
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: gestion_stag
+      MYSQL_ROOT_PASSWORD: Azerty1
+      MYSQL_USER: yassine
+      MYSQL_PASSWORD: Azerty1
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    networks:
+      - app-network
+
+#Docker Networks
+networks:
+  app-network:
+    driver: bridge
