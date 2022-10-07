@@ -12,7 +12,7 @@
 
         $requetFiliere = "SELECT * FROM filiere LIMIT 8 ";
 
-        if($filiere===0){
+        if($filiere==0){
             $requestStagiaire = "SELECT idStagiaire,nom,prenom,NomFiliere,civilite FROM filiere as f,stagiaire as s WHERE f.idFiliere=s.idFiliere 
                                 AND(nom like '%$nomPrenom%' OR prenom LIKE '%$nomPrenom%') ORDER BY idStagiaire LIMIT $size offset $offset";
                                  
@@ -73,7 +73,7 @@
                 </div>
             </div>
             <div class="panel panel-primary margetop">
-                <div class="panel-heading">Liste des Stagiaires(<?php echo $nbrS ?>) Stagiaires</div>      
+                <div class="panel-heading">Liste des Stagiaires: (<?php echo $nbrS ?>) Stagiaires</div>      
                 <div class="panel-body">
                     <table class="table table-striped">
                         <thead>

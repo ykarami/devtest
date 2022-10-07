@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="panel panel-primary margetop">
-                <div class="panel-heading">Liste des filieres (<?php echo $nbrF ?>) filieres</div>      
+                <div class="panel-heading">Liste des filieres : (<?php echo $nbrF ?>) filieres</div>      
                 <div class="panel-body">
                     <table class="table table-striped">
                         <thead>
