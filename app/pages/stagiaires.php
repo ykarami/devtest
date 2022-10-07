@@ -31,7 +31,7 @@
 
         $tabCount = $resultatStagiaireCount->fetch();
         $nbrS = $tabCount['countS'];
-        $reste = $nbrF%$size;
+        $reste = $nbrS%$size;
         if($reste==0){
             $nbrPage = $nbrS/$size;
         }else{
@@ -59,7 +59,7 @@
                             <select name="filiere" id="filiere" class="form-control">
                                 <option value="0">Toutes les filieres </option>
                                 <?php while($filiereL=$resultatFiliere->fetch()){  ?>
-                                <option value="<?php echo $filiereL['idFiliere']?>"><?php echo $filiereL['NomFiliere']?></option>
+                                <option value="<?php echo $filiereL['idFiliere']?>" <?php if($filiereL['idFiliere']==$filiere) echo "selected"?> ><?php echo $filiereL['NomFiliere']?></option>
                                 <?php }?>
                             </select>
                         </div>
