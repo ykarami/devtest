@@ -68,7 +68,7 @@
                         </div>
                         <button type="submit" class="btn btn-success" > <span class="glyphicon glyphicon-search"></span> Chercher...</button>
                         &nbsp &nbsp
-                        <a href="newFiliere.php"><span class="glyphicon glyphicon-plus"> </span> Nouvelle filiere</a>
+                        <a href="newStagiaire.php"><span class="glyphicon glyphicon-plus"> </span> Nouveau stagiaire</a>
                     </form>
                 </div>
             </div>
@@ -95,7 +95,7 @@
                                         <span class="glyphicon glyphicon-edit"> </span>
                                     </a>
                                      &nbsp 
-                                     <a onclick="return confirm(' etes vous sur de suprimer')" href="deleteStagiaires.php?idF=<?php echo $stagiaire['idStagiaire'] ?>" >
+                                     <a onclick="return confirm(' etes vous sur de suprimer')" href="deleteStagiaires.php?idStagaire=<?php echo $stagiaire['idStagiaire'] ?>" >
                                         <span class="glyphicon glyphicon-trash"> </span>
                                      </a>
                                 </td>
