@@ -58,8 +58,8 @@
                             <label for="filiere">Filiere : </label>
                             <select name="filiere" id="filiere" class="form-control">
                                 <option value="0">Toutes les filieres </option>
-                                <?php while($filiere=$resultatFiliere->fetch()){  ?>
-                                <option value="<?php echo $filiere['idFiliere']?>"><?php echo $filiere['NomFiliere']?></option>
+                                <?php while($filiereL=$resultatFiliere->fetch()){  ?>
+                                <option value="<?php echo $filiereL['idFiliere']?>"><?php echo $filiereL['NomFiliere']?></option>
                                 <?php }?>
                             </select>
                         </div>
@@ -91,11 +91,11 @@
                                 <td><?php echo $stagiaire['NomFiliere']?></td>
 
                                 <td>
-                                    <a href="editFiliere.php?idFiliere=<?php echo $filiere['idFiliere']?>">
+                                    <a href="editStagiaire.php?idStagiaire=<?php echo $stagiaire['idStagiaire']?>">
                                         <span class="glyphicon glyphicon-edit"> </span>
                                     </a>
                                      &nbsp 
-                                     <a onclick="return confirm(' etes vous sur de suprimer')" href="deleteFiliere.php?idF=<?php echo $filiere['idFiliere'] ?>" >
+                                     <a onclick="return confirm(' etes vous sur de suprimer')" href="deleteStagiaires.php?idF=<?php echo $stagiaire['idStagiaire'] ?>" >
                                         <span class="glyphicon glyphicon-trash"> </span>
                                      </a>
                                 </td>
@@ -106,10 +106,8 @@
                     </table>
                     <div >
                         <ul class="pagination">
-                        <?php  for($i=1; $i<=$nbrPage;$i++){ ?>
-                            
-                             
-                            <li class="<?php if($i==$page) echo 'active' ?>"><a href="filieres.php?page=<?php echo $i;?>&nomF=<?php echo $nomF ?>&niveau=<?php echo $niveau ?>">  <?php echo $i; ?> </a></li>
+                        <?php  for($i=1; $i<=$nbrPage;$i++){ ?> 
+                            <li class="<?php if($i==$page) echo 'active' ?>"><a href="stagiaires.php?page=<?php echo $i;?>&filiere=<?php echo $filiere ?>&nomPrenom=<?php echo $nomPrenom ?>">  <?php echo $i; ?> </a></li>
 			<?php } ?>  
 
                         </ul>
