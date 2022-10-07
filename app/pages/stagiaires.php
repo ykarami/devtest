@@ -95,7 +95,7 @@
                                         <span class="glyphicon glyphicon-edit"> </span>
                                     </a>
                                      &nbsp 
-                                     <a onclick="return confirm(' etes vous sur de suprimer')" href="deleteStagiaires.php?idStagaire=<?php echo $stagiaire['idStagiaire'] ?>" >
+                                     <a onclick="return confirm(' etes vous sur de suprimer')" href="deleteStagiaires.php?idStagiaire=<?php echo $stagiaire['idStagiaire'] ?>" >
                                         <span class="glyphicon glyphicon-trash"> </span>
                                      </a>
                                 </td>
