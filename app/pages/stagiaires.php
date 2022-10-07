@@ -1,7 +1,6 @@
 <?php
         require_once("connexiondb.php");
         ini_set('display_errors', 'on');
-                
         $filiere = isset($_GET['filiere'])?$_GET['filiere']:0;
         $nomPrenom = isset($_GET['nomPrenom'])?$_GET['nomPrenom']:"";
         
