@@ -73,8 +73,10 @@
                 </div>
             </div>
             <div class="panel panel-primary margetop">
-                <div class="panel-heading">Liste des Stagiaires: (<?php echo $nbrS ?>) Stagiaires</div>      
+                <div class="panel-heading">Liste des Stagiaires: (<?php echo $nbrS ?>)Stagiaires</div>     
+
                 <div class="panel-body">
+
                     <table class="table table-striped">
                         <thead>
                             <tr>
