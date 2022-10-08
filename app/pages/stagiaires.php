@@ -10,7 +10,7 @@
         $offset = ($page-1)*$size;
 
 
-        $requetFiliere = "SELECT * FROM filiere LIMIT 8 ";
+        $requetFiliere = "SELECT * FROM filiere  ";
 
         if($filiere==0){
             $requestStagiaire = "SELECT idStagiaire,nom,prenom,NomFiliere,civilite FROM filiere as f,stagiaire as s WHERE f.idFiliere=s.idFiliere 
@@ -88,8 +88,7 @@
                                 <td><?php echo $stagiaire['prenom']?></td>
                                 <td><?php echo $stagiaire['nom']?></td>
                                 <td><?php echo $stagiaire['civilite']?></td>
-                                <td><?php echo $stagiaire['NomFiliere']?></td>
-
+                                <td><?php echo $stagiaire['NomFiliere']?></td>=
                                 <td>
                                     <a href="editStagiaire.php?idStagiaire=<?php echo $stagiaire['idStagiaire']?>">
                                         <span class="glyphicon glyphicon-edit"> </span>
