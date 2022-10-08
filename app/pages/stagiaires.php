@@ -13,12 +13,12 @@
         $requetFiliere = "SELECT * FROM filiere  ";
 
         if($filiere==0){
-            $requestStagiaire = "SELECT idStagiaire,nom,prenom,NomFiliere,civilite FROM filiere as f,stagiaire as s WHERE f.idFiliere=s.idFiliere 
+            $requestStagiaire = "SELECT idStagiaire,nom,prenom,nomFiliere,civilite FROM filiere as f,stagiaire as s WHERE f.idFiliere=s.idFiliere 
                                 AND(nom like '%$nomPrenom%' OR prenom LIKE '%$nomPrenom%') ORDER BY idStagiaire LIMIT $size offset $offset";
                                  
             $requestStagiaireCount = "SELECT COUNT(*) countS FROM stagiaire WHERE nom like '%$nomPrenom%' OR prenom like '%$nomPrenom%'";                       
         }else{
-            $requestStagiaire = "SELECT idStagiaire,nom,prenom,NomFiliere,civilite FROM filiere as f,stagiaire as s WHERE f.idFiliere=s.idFiliere 
+            $requestStagiaire = "SELECT idStagiaire,nom,prenom,nomFiliere,civilite FROM filiere as f,stagiaire as s WHERE f.idFiliere=s.idFiliere 
                                 AND(nom like '%$nomPrenom%' OR prenom LIKE '%$nomPrenom%') AND f.idFiliere=$filiere ORDER BY idStagiaire limit $size offset $offset ";
     
             $requestStagiaireCount = "SELECT COUNT(*) countS FROM stagiaire WHERE (nom like '%$nomPrenom%' OR prenom like '%$nomPrenom%') AND idFiliere=$filiere ";                    
@@ -59,7 +59,7 @@
                             <select name="filiere" id="filiere" class="form-control">
                                 <option value="0">Toutes les filieres </option>
                                 <?php while($filiereL=$resultatFiliere->fetch()){  ?>
-                                <option value="<?php echo $filiereL['idFiliere']?>" <?php if($filiereL['idFiliere']==$filiere) echo "selected"?> ><?php echo $filiereL['NomFiliere']?></option>
+                                <option value="<?php echo $filiereL['idFiliere']?>" <?php if($filiereL['idFiliere']==$filiere) echo "selected"?> ><?php echo $filiereL['nomFiliere']?></option>
                                 <?php }?>
                             </select>
                         </div>
@@ -90,7 +90,7 @@
                                 <td><?php echo $stagiaire['prenom']?></td>
                                 <td><?php echo $stagiaire['nom']?></td>
                                 <td><?php echo $stagiaire['civilite']?></td>
-                                <td><?php echo $stagiaire['NomFiliere']?></td>=
+                                <td><?php echo $stagiaire['nomFiliere']?></td>
                                 <td>
                                     <a href="editStagiaire.php?idStagiaire=<?php echo $stagiaire['idStagiaire']?>">
                                         <span class="glyphicon glyphicon-edit"> </span>

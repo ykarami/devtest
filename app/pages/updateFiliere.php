@@ -12,8 +12,4 @@
     header('location:filieres.php');
 
 
-
-
-
-
 ?>

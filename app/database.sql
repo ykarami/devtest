@@ -5,7 +5,7 @@ use gestion_stag;
 
 create table filiere(
     idFiliere int(4) auto_increment primary key,
-    NomFiliere varchar(50),
+    nomFiliere varchar(50),
     niveau varchar(50)
 );
 
@@ -30,30 +30,6 @@ Alter table stagiaire add constraint foreign key(idFiliere)  references filiere(
 
 
 INSERT INTO filiere(nomFiliere,niveau) VALUES
-	('TSDI','TS'),
-	('TSRI','TS'),
-    ('TSGO','TS'),
-	('TSGE','TS'),
-	('TCE','T'),
-    ('TGI','T'),
-    ('TMI','T'),
-    ('TDB','T'),
-	('TSDI','TS'),
-	('TSRI','TS'),
-    ('TSGO','TS'),
-	('TSGE','TS'),
-	('TCE','T'),
-    ('TGI','T'),
-    ('TMI','T'),
-    ('TDB','T'),
-	('TSDI','TS'),
-	('TSRI','TS'),
-    ('TSGO','TS'),
-	('TSGE','TS'),
-	('TCE','T'),
-    ('TGI','T'),
-    ('TMI','T'),
-    ('TDB','T'),
 	('TSDI','TS'),
 	('TSRI','TS'),
     ('TSGO','TS'),
