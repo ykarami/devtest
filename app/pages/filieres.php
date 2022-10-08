@@ -10,11 +10,11 @@
         $offset = ($page-1)*$size;
 
         if($niveau=="all"){
-            $requete= "SELECT * FROM filiere WHERE NomFiliere like '%$nomF%' limit $size offset $offset ";
-            $requeteCount = "SELECT count(*) countF FROM filiere WHERE NomFiliere like '%$nomF%' ";
+            $requete= "SELECT * FROM filiere WHERE nomFiliere like '%$nomF%' limit $size offset $offset ";
+            $requeteCount = "SELECT count(*) countF FROM filiere WHERE nomFiliere like '%$nomF%' ";
         }else{
-            $requete= "SELECT * FROM filiere WHERE NomFiliere like '%$nomF%' AND niveau='$niveau' limit $size offset $offset ";
-            $requeteCount = "SELECT count(*) countF FROM filiere WHERE NomFiliere like '%$nomF%' AND niveau='$niveau'";
+            $requete= "SELECT * FROM filiere WHERE nomFiliere like '%$nomF%' AND niveau='$niveau' limit $size offset $offset ";
+            $requeteCount = "SELECT count(*) countF FROM filiere WHERE nomFiliere like '%$nomF%' AND niveau='$niveau'";
         }
 
         $resultatF = $pdo->query($requete);
@@ -74,7 +74,7 @@
                         <?php while($filiere=$resultatF->fetch()){?>
                             <tr>
                                 <td><?php echo $filiere['idFiliere'] ?></td>
-                                <td><?php echo $filiere['NomFiliere']?></td>
+                                <td><?php echo $filiere['nomFiliere']?></td>
                                 <td><?php echo $filiere['niveau']?></td>
 
                                 <td>
