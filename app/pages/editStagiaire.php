@@ -59,7 +59,7 @@
                         <label for="filiere">Filière :</label> 
                         <select name="filiere" class="form-control" id="filiere">
                                 <?php while($filiere  = $resultatFiliere->fetch()){ ?>
-                                        <option value="<?php echo  $filiere['idfiliere'] ?> "<?php if($filiere['idFiliere']==$idFiliere) echo "selected" ?> > <?php echo $filiere['NomFiliere'] ?> </option>
+                                        <option value="<?php echo  $filiere['idfiliere'] ?> "<?php if($filiere['idFiliere']==$idFiliere) echo "selected" ?> > <?php echo $filiere['nomFiliere'] ?> </option>
                                <?php } ?>
                         </select>
                         </div>

@@ -5,7 +5,7 @@
     $niveauF = isset($_POST['niveau'])?$_POST['niveau']:"";
 
 
-    $requet = "UPDATE filiere SET NomFiliere=?, niveau=? WHERE idFiliere=?";
+    $requet = "UPDATE filiere SET nomFiliere=?, niveau=? WHERE idFiliere=?";
     $params = array($nomF,$niveauF,$idF);
     $resultat = $pdo->prepare($requet);
     $resultat->execute($params);
