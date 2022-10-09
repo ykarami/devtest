@@ -33,12 +33,12 @@
 
         <div class="container">    
             <div class="panel panel-primary margetop">
-                <div class="panel-heading">Entrer les informations dez stagiaire: <?php echo $idFiliere ?>;</div>
+                <div class="panel-heading">Entrer les informations dez stagiaire: </div>
                 <div class="panel-body">
                     <form method="post" action="updateStagiaire.php" class="form">
                         <div class="form-group">
                             <label for="idF">ID Stagiaire :</label> &nbsp<?php echo $idStagiaire ?>
-                            <input type="hidden" name="idF" class="form-control" value="<?php echo $idStagiaire ?>">
+                            <input type="hidden" name="idS" class="form-control" value="<?php echo $idStagiaire ?>">
                         </div>
                         <div class="form-group">
                             <label for="prenom">Prénom :</label> 

@@ -7,7 +7,7 @@
     $resultat = $pdo->query($requet);
     $filiere = $resultat->fetch();
 
-    $nomF = $filiere['NomFiliere'];
+    $nomF = $filiere['nomFiliere'];
     $niveau = $filiere['niveau'];
 
 
