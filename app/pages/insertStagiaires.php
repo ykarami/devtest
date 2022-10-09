@@ -1,14 +1,17 @@
 <?php
     require_once('connexiondb.php');
+    ini_set('display_errors', 'on');
 
-    $nomF = isset($_POST['nomF'])?$_POST['nomF']:"";
-    $niveau = isset($_POST['niveau'])?$_POST['niveau']:"";
+    $nomS = isset($_POST['nom'])?$_POST['nom']:"";
+    $prenomS = isset($_POST['prenom'])?$_POST['prenom']:"";
+    $civiliteS = isset($_POST['civilite'])?$_POST['civilite']:"";
+    $filiereS= isset($_POST['filiere'])?$_POST['filiere']:0;
 
-    $requet = "INSERT INTO filiere(NomFiliere, niveau) VALUES(?,?)";
-    $params = array($nomF,$niveau);
-    $resultat = $pdo->prepare($requet);
-    $resultat->execute($params);
+    $requet = "INSERT INTO stagiaire(nom, prenom, civilite, idFiliere) VALUES(?,?,?,?)";
+    $params = array($nomS,$prenomS, $civiliteS,$filiereS);
+    $result = $pdo->prepare($requet);
+    $result->execute($params);
 
-    header('location:filieres.php')
+    header('location:stagiaires.php')
 
 ?>
