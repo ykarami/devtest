@@ -74,7 +74,7 @@
                                     <a onclick="return confirm(' etes vous sur de suprimer')" href="deleteUtilisateur.php?idUtilisateur=<?php echo $utilisateur['idUtilisateur'] ?>" >
                                         <span class="glyphicon glyphicon-trash"> </span>
                                     </a>&nbsp &nbsp 
-                                    <a href="activeUtilisateur.php?idUtilisateur=<?php echo $utilisateur['idUtilisateur'] ?>">
+                                    <a href="changeEtat.php?idUtilisateur=<?php echo $utilisateur['idUtilisateur'] ?>">
                                        <?php
                                             if($utilisateur['etat']==1)
                                                echo  '<span class="glyphicon glyphicon-remove"> </span>';
