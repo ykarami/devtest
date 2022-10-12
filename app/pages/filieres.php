@@ -1,4 +1,6 @@
 <?php
+        
+        require_once("identifier.php");
         require_once("connexiondb.php");
                 
         $nomF = isset($_GET['nomF'])?$_GET['nomF']:"";

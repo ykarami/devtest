@@ -1,4 +1,11 @@
 <?php
+
+        require_once("identifier.php");
+        if(!isset($_SESSION['user'])){
+
+            header('location:login.php');
+        }
+
         require_once("connexiondb.php");
         ini_set('display_errors', 'on');
 
