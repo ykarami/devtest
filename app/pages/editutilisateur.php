@@ -1,4 +1,5 @@
 <?php
+    require_once("identifier.php");
     require_once('connexiondb.php');
     ini_set('display_errors', 'on');
 

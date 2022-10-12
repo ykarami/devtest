@@ -1,5 +1,5 @@
 <?php
-
+    require_once("identifier.php");
     require_once('connexiondb.php');
     $idFiliere =  isset($_GET['idFiliere'])?$_GET['idFiliere']:"";
     

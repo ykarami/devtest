@@ -69,7 +69,10 @@
                         </div>
                         <button type="submit" class="btn btn-success" > <span class="glyphicon glyphicon-search"></span> Chercher...</button>
                         &nbsp &nbsp
+                        <?php if($_SESSION['user']['role']=='ADMIN'){ ?>
                         <a href="newStagiaire.php"><span class="glyphicon glyphicon-plus"> </span> Nouveau stagiaire</a>
+
+                        <?php } ?>
                     </form>
                 </div>
             </div>
@@ -81,7 +84,7 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                            <th>id Stagiaire</th><th>Prénom </th><th>Nom</th><th>Civilité</th><th>Filière</th>
+                            <th>id Stagiaire</th><th>Prénom </th><th>Nom</th><th>Civilité</th><th>Filière</th><?php if($_SESSION['user']['role']=='ADMIN'){ ?><th>Actions</th> <?php } ?>
                             </tr>
                         </thead>
                         <tbody>
@@ -92,6 +95,7 @@
                                 <td><?php echo $stagiaire['nom']?></td>
                                 <td><?php echo $stagiaire['civilite']?></td>
                                 <td><?php echo $stagiaire['nomFiliere']?></td>
+                                <?php if($_SESSION['user']['role']=='ADMIN'){  ?> 
                                 <td>
                                     <a href="editStagiaire.php?idStagiaire=<?php echo $stagiaire['idStagiaire']?>">
                                         <span class="glyphicon glyphicon-edit"> </span>
@@ -101,6 +105,7 @@
                                         <span class="glyphicon glyphicon-trash"> </span>
                                      </a>
                                 </td>
+                                <?php } ?>
                             </tr>
                         <?php } ?>
 

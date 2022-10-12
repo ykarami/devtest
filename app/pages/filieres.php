@@ -59,7 +59,9 @@
                         </select>
                         <button type="submit" class="btn btn-success" > <span class="glyphicon glyphicon-search"></span> Chercher...</button>
                         &nbsp &nbsp
-                        <a href="newFiliere.php"><span class="glyphicon glyphicon-plus"> </span> Nouvelle filiere</a>
+                        <?php if($_SESSION['user']['role']=='ADMIN'){ ?>
+                            <a href="newFiliere.php"><span class="glyphicon glyphicon-plus"> </span> Nouvelle filiere</a>
+                        <?php } ?>
                     </form>
                 </div>
             </div>
@@ -69,7 +71,7 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                            <th>id Filiere</th><th>Nom Filiere</th><th>Niveau</th><th>Action</th>
+                            <th>id Filiere</th><th>Nom Filiere</th><th>Niveau</th><?php if($_SESSION['user']['role']=='ADMIN'){ ?><th>Action</th> <?php } ?>
                             </tr>
                         </thead>
                         <tbody>
@@ -78,19 +80,19 @@
                                 <td><?php echo $filiere['idFiliere'] ?></td>
                                 <td><?php echo $filiere['nomFiliere']?></td>
                                 <td><?php echo $filiere['niveau']?></td>
-
-                                <td>
-                                    <a href="editFiliere.php?idFiliere=<?php echo $filiere['idFiliere']?>">
-                                        <span class="glyphicon glyphicon-edit"> </span>
-                                    </a>
-                                     &nbsp 
-                                     <a onclick="return confirm(' etes vous sur de suprimer')" href="deleteFiliere.php?idF=<?php echo $filiere['idFiliere'] ?>" >
-                                        <span class="glyphicon glyphicon-trash"> </span>
-                                     </a>
-                                </td>
+                                <?php if($_SESSION['user']['role']=='ADMIN'){ ?>
+                                    <td>
+                                        <a href="editFiliere.php?idFiliere=<?php echo $filiere['idFiliere']?>">
+                                            <span class="glyphicon glyphicon-edit"> </span>
+                                        </a>
+                                        &nbsp 
+                                        <a onclick="return confirm(' etes vous sur de suprimer')" href="deleteFiliere.php?idF=<?php echo $filiere['idFiliere'] ?>" >
+                                            <span class="glyphicon glyphicon-trash"> </span>
+                                        </a>
+                                    </td>
+                                <?php } ?>    
                             </tr>
                         <?php } ?>
-
                         </tbody>
                     </table>
                     <div >

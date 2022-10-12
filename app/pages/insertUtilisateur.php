@@ -1,4 +1,5 @@
 <?php
+    require_once("identifier.php");
     require_once('connexiondb.php');
 
     $login = isset($_POST['login'])?$_POST['login']:"";

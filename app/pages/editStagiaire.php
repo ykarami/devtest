@@ -1,5 +1,5 @@
 <?php
-
+    require_once("identifier.php");
     require_once('connexiondb.php');
     $idStagiaire =  isset($_GET['idStagiaire'])?$_GET['idStagiaire']:0;
     

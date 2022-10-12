@@ -1,5 +1,5 @@
 <?php
-
+        require_once("identifier.php");
         require_once("identifier.php");
         if(!isset($_SESSION['user'])){
 

@@ -8,5 +8,10 @@
                 <li><a href="filieres.php"> Les filieres </a></li>
                 <li><a href="utilisateurs.php"> utilisateurs </a></li>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+                <li><a href=#><i class="glyphicon glyphicon-user"></i> <?php echo $_SESSION['user']['login']?> </a></li>
+                <li><a href="seDeconnecter.php"><i class="glyphicon glyphicon-log-out"></i> Se deconnecter</a></li>
+        </ul>
     </div>
+    
 </nav>        
