@@ -45,6 +45,7 @@
 
                         <div class="form-group col-xs-5">
                             <button type="submit" class="btn btn-success" > <span class="glyphicon glyphicon-save"></span> Enregister</button>
+                            <a href="editPassword.php">Modifier mot de passe</a>
                         </div>      
                     </form>
                 </div>
